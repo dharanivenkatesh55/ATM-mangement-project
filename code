@@ -1,73 +1,69 @@
 import java.util.Scanner;
 class machine
 {
-	int amt,new_amt,withdrawamt,rrr;
-	int amountt(int amt)
-	{
-		this.amt=amt;
-		return amt;
-	}
-	int deposit(int new_amt)
-	{
-		this.new_amt=new_amt;
-		amt=amt+new_amt;
-		System.out.println("amount is deposited : "+amt);
-		return amt;
-	}
-	int withdraw(int withdrawamt)
-	{
-		
-		this.withdrawamt=withdrawamt;
-		
-		amt=amt-withdrawamt;
-	
-		System.out.println("amount is withdrawed"+amt);
-		return amt;
-	}
-	void balence()
-	{
-		System.out.println(amt);
-	}
+int amt,new_amt,withdrawamt,rrr;
+int amountt(int amt)
+{
+this.amt=amt;
+return amt;
+}
+int deposit(int new_amt)
+{
+this.new_amt=new_amt;
+amt=amt+new_amt;
+System.out.println("amount is deposited : "+amt);
+return amt;
+}
+intwithdraw(int withdrawamt)
+{		
+this.withdrawamt=withdrawamt;
+amt=amt-withdrawamt;	
+System.out.println("amount is withdrawed"+amt);
+return amt;
+}
+void balence()
+{
+System.out.println(amt);
+}
 }
 class atm
 {
-	public static void main(String[]args)
-	{
-		int amt,c=0;
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the amount : ");
-		amt=sc.nextInt();
-		machine m=new machine();
-		while(c<=4)
-		{
-			int new_amt=0,withdrawamt=0;
-			System.out.println("1.deposit");
-			System.out.println("2.withdraw");
-			System.out.println("3.balence");
-			System.out.println("4.quit");
-			System.out.println("ENTER YOUR CHOICE :");
-			c=sc.nextInt();
-			switch(c)
-			{
-				
-				case 1:
-				m.amountt(amt);
-				System.out.println("ENTER THE AMOUNT:");
-				new_amt=sc.nextInt();
-				m.deposit(new_amt);
-				break;
-				case 2:
-				m.amountt(amt);
-				System.out.println("ENTER THE AMOUNT:");
-				withdrawamt=sc.nextInt();
-				m.withdraw(withdrawamt);
-				break;
-				case 3:
-				m.balence();
-				break;
-				case 4:
-				System.exit(0);
-				break;
-			}
-		}
-	}
+public static void main(String[]args)
+{
+int amt,c=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the amount : ");
+amt=sc.nextInt();
+machine m=new machine();
+while(c<=4)
+{
+int new_amt=0,withdrawamt=0;
+System.out.println("1.deposit");
+System.out.println("2.withdraw");
+System.out.println("3.balence");
+System.out.println("4.quit");
+System.out.println("ENTER YOUR CHOICE :");
+c=sc.nextInt();
+switch(c)
+{
+case 1:
+m.amountt(amt);
+System.out.println("ENTER THE AMOUNT:");
+new_amt=sc.nextInt();
+m.deposit(new_amt);
+break;
+case 2:
+m.amountt(amt);
+System.out.println("ENTER THE AMOUNT:");
+withdrawamt=sc.nextInt();
+m.withdraw(withdrawamt);
+break;
+case 3:
+m.balence();
+break;
+case 4:
+System.exit(0);
+break;
+}
+}
+}
